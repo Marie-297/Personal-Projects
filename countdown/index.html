@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="container">
+    <div class="input">
+      <input type="date" id="date">
+      <input type="text" placeholder="Enter name of event" id="ocassion">
+      <button class="btn" onclick="setCountDown()">start Countdoun</button>
+    </div>
+    <h1>Coundown To <span class="event">New Year</span></h1>
+    <div class="timer">
+      <div class="days">
+        <span class="numberdays number">0</span>
+        <p class="daysleft">day(s)</p>
+      </div>
+      <div class="hours">
+        <span class="numberhours number">0</span>
+        <p class="daysleft">hour(s)</p>
+      </div>
+      <div class="minutes">
+        <span class="numberminutes number">0</span>
+        <p class="daysleft">minute(s)</p>
+      </div>
+      <div class="seconds">
+        <span class="numberseconds number">0</span>
+        <p class="daysleft">second(s)</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
