@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Rock, Paper, Scissors Game</title>
+</head>
+<body>
+  <div class="rule hidden">
+    <u class="head">RULES IN PLAYING</u>
+    <p>The rock is a closed fist; paper is a flat hand with fingers and thumb open and extended; and scissors is a fist with the index and middle fingers fully extended toward the opposing player.</p>
+    <p>Rock wins against scissors.</p>
+    <p>Paper wins against Rock.</p>
+    <p>And scissors wins against paper.</p>
+    <p>Same choice result in a Tie.</p>
+    <div class="ok">
+       <button type="button"onclick="okBtn()" class="okbtn">OKAY</button>
+    </div>
+  </div>
+  <div class="starter">
+    <h2>Welcome To <br> Rock, Paper, Scissors Game</h2>
+    <p class="rules">Click the link below to read the rules on how to play the game!!!</p>
+    <button type="button" onclick="clickMe()" class="click">Click Me</button>
+    <button class="strtgame" type="button" onclick="startGame();">Start Game</button>
+  </div>
+  <div class="gameCont hidden">
+    <p class="time"></p>
+    <h1>ROCK, PAPER, SCISSORS...</h1>
+    <div class="btns">
+      <button class="bttn-img" onclick="
+      playGame('rock');
+    "><img src="../images/rock-emoji.png" class="emoji" alt=""></button>
+  
+    <button class="bttn-img" onclick="
+      playGame('paper');
+    "><img src="../images/paper-emoji.png" class="emoji" alt=""></button>
+  
+    <button class="bttn-img" onclick="
+      playGame('scissors');
+    "><img src="../images/scissors-emoji.png" class="emoji" alt=""></button>
+    </div>
+  
+    <p class="js-score-state score"></p>
+  
+    <p class="choices">YOU: <img src="../images/rock-emoji.png" alt="" class="emoji playerhand"> - COMPUTER:  <img src="../images/rock-emoji.png" alt="" class="emoji computerhand"></p>
+  
+    <p class="scoremarks"></p>
+  
+    <button type="button" onclick="
+      score.Wins = 0;
+      score.Losses = 0;
+      score.Ties = 0;
+      localStorage.removeItem('score')
+      scoresUpdate();
+    " class="reset-button">Reset Scores</button>
+  </div>
+  <div class="finishgame hidden">
+    <h1 class="finishscore">SCORE UPDATE</h1>
+    <div class="scoreUpdate">
+      <p>YOUR SCORE: <span class="userscore"></span><b> Wins</b></p>
+      <p>COMPUTER SCORE: <span class="compscore"></span><b> Wins</b></p>
+      <p>TIES: <span class="tiescore"></span></p>
+    </div>
+    <div class="finishbtns">
+      <button type="button" onclick="
+        location.reload();
+      " class="restart-button">Restart</button>
+      <button type="button" onclick="
+        playAgain();
+      " class="playagain-button">Play Again</button>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
