@@ -1,3 +1,3 @@
-export function moneyFormat() {
-  (priceCents / 100).toFixed(2);
+export function moneyFormat(priceCents) {
+  return (priceCents / 100).toFixed(2);
 }
