@@ -10,7 +10,7 @@ export function renderPaymentSummary() {
     const product = getProduct(cartItem.productId);
     productPriceCents += product.priceCents * cartItem.quantity;
     const deliveryOption = getDeliveryOptions(cartItem.deliveryOptionId);
-    shippingPriceCents = deliveryOption.priceCents;
+    shippingPriceCents += deliveryOption.priceCents;
   });
   const totalBeforeTax = productPriceCents + shippingPriceCents;
   const totalAfterTax = totalBeforeTax * 0.1;
