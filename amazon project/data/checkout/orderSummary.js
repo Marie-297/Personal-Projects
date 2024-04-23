@@ -95,6 +95,9 @@ export function renderOrderSummary() {
   }
 
   document.querySelector(".js-order-summary").innerHTML = cartSummaryHTML;
+  // if (!cart) {
+  //   cartSummaryHTML.innerHTML = "Your Cart Is Empty";
+  // }
 
   document.querySelectorAll(".js-delete-quantity-link").forEach((link) => {
     link.addEventListener("click", () =>{
