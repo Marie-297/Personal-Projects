@@ -1,18 +1,26 @@
 //name my variable
 const display = document.getElementById("display");
 const equal = document.querySelector(".equalbtn");
+let operators = document.querySelectorAll(".operator");
+let previousDisplay = '';
 
 // a function to display the number clicked on
 function chooseNumber(input) {
+  // Clear the display if it contains the result of the evaluation
+  if (!isNaN(display.value)) {
+    display.value = '';
+  }
+  // Append the new number to the display
   display.value = display.value + input;
-  // if (display.value === eval(display.value)) {
-  //   display.value = "";
-  // };
+  formatEqualBtn();
 }
 
 // a function to display the operator character choice
 function operationButton(input) {
-  display.value = display.value + input;
+  if (input === input &&  display.value.length+1 === input)  return
+  display.value = eval(display.value.toString()) + input.toString();
+  // resetEqualButton();
+  formatEqualBtn();
 }
 
 // a function to clear all the displays
@@ -20,24 +28,54 @@ function clearButton() {
   display.value = '';
 }
 
-// a function to remove/delete the first display on the right each time that button is clicked
+// a function to remove/delete the last character each time that button is pressed
 function deleteBtn() {
  value = display.value.slice(0,-1);
  display.value = value;
 }
+let operatorSelect = '';
 
-//conditional function for the equal-button
-function equalBtn() {
-  if (display.value === eval(display.value)) {
-    equal.addEventListener("click", ()=> {
-      let x = display.value;
-      let y = Math.eval(x);
-      display.value = y;
-    })
-  }
-}
+console.log(previousDisplay);
+display.addEventListener('input', () => {
+  previousDisplay = display.value;
+})
 
 // a function to calculate/evaluate the result of the display
 function equalButton() {
-  display.value = eval(display.value);
+  let operatorSelect = '';
+  let previousDisplay = display.value;
+  console.log(previousDisplay);
+  operators.forEach(operator => {
+    if (previousDisplay.includes(operator.textContent)) {
+      operatorSelect = operator.textContent;
+      console.log(operatorSelect);
+      console.log(previousDisplay);
+    }
+  });
+  // Evaluate the expression in the display value
+  let result = eval(previousDisplay);
+  console.log(result);
+  display.value = result;
+  equal.addEventListener("click", () => {
+    // If an operator is found, split the display value and evaluate the expression
+    if (operatorSelect) {
+      let parts = previousDisplay.split(operatorSelect);
+      const lastNum = parts[1];
+      console.log(lastNum);
+      console.log(operatorSelect);
+      let result = eval(display.value + operatorSelect + lastNum);
+      console.log(display.value + operatorSelect + lastNum);
+      display.value = result;
+      console.log(result);
+    };
+  }); 
+  if (equal.onclick === '') {
+    return;
+  }
 };
+function formatEqualBtn() {
+  previousDisplay = '';
+  operatorSelect = '';
+  equal.addEventListener('click',equalButton.stop());
+};
+
