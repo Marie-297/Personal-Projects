@@ -12,15 +12,12 @@ function chooseNumber(input) {
   }
   // Append the new number to the display
   display.value = display.value + input;
-  formatEqualBtn();
 }
 
 // a function to display the operator character choice
 function operationButton(input) {
   if (input === input &&  display.value.length+1 === input)  return
   display.value = eval(display.value.toString()) + input.toString();
-  // resetEqualButton();
-  formatEqualBtn();
 }
 
 // a function to clear all the displays
@@ -57,6 +54,7 @@ function equalButton() {
   console.log(result);
   display.value = result;
   equal.addEventListener("click", () => {
+    console.log(previousDisplay);
     // If an operator is found, split the display value and evaluate the expression
     if (operatorSelect) {
       let parts = previousDisplay.split(operatorSelect);
@@ -69,13 +67,8 @@ function equalButton() {
       console.log(result);
     };
   }); 
-  if (equal.onclick === '') {
-    return;
-  }
 };
-function formatEqualBtn() {
-  previousDisplay = '';
-  operatorSelect = '';
-  equal.addEventListener('click',equalButton.stop());
-};
+
+//After clicking on the equal button several times and changing the display value with a different operator, the equal button will continue running the function from previous onclick event
+
 
