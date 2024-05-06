@@ -42,21 +42,23 @@ function equalButton() {
   let operatorSelect = '';
   let previousDisplay = display.value;
   console.log(previousDisplay);
-  operators.forEach(operator => {
-    if (previousDisplay.includes(operator.textContent)) {
-      operatorSelect = operator.textContent;
-      console.log(operatorSelect);
-      console.log(previousDisplay);
-    }
-  });
   // Evaluate the expression in the display value
   let result = eval(previousDisplay);
+  console.log(previousDisplay);
   console.log(result);
   display.value = result;
   equal.addEventListener("click", () => {
+    operators.forEach(operator => {
+      if (previousDisplay.includes(operator.textContent)) {
+        operatorSelect = operator.textContent;
+        console.log(operatorSelect);
+        console.log(previousDisplay);
+      }
+    });
     console.log(previousDisplay);
     // If an operator is found, split the display value and evaluate the expression
     if (operatorSelect) {
+      console.log(previousDisplay);
       let parts = previousDisplay.split(operatorSelect);
       const lastNum = parts[1];
       console.log(lastNum);
