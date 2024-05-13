@@ -3,37 +3,106 @@
 }
 body {
   margin: 0;
+  overflow-y: hidden;
+  background-color: lightgray;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  font-family: Poppins,sans-serif;
+}
+#root {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: poppins,sans-serif;
 }
 nav {
   padding: 10px 50px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 .airbnb {
+  background-color: white;
   width: 550px;
-  height: 860px;
+  height: 753px;
+  box-shadow: 0px 5px 5px white;
 }
 .uppersection {
   padding: 15px 30px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 0px;
   .img-grid {
-    width: 70%;
-    max-height: 400px;
+    width: 396px;
+    max-height: 232px;
     align-self: center;
   }
   .header {
-    width: 400px;
-    font-size: 40px;
-    margin-bottom: 10px;
+    width: 347px;
+    font-size: 32px;
+    margin-bottom: 5px;
+    margin-top: 0px;
     margin-top: 0px;
   }
   .text {
-    width: 380px;
-    font-size: 18px;
+    width: 347px;
+    font-size: 16px;
     margin-top: 0px;
+    margin-bottom: 0px;
+    line-height: 17px;
   }
+}
+.lowersection {
+  margin-top: 0px;
+  padding-right: 0px;
+}
+.rating {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  margin-bottom: 5px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 176px;
+  height: 300px;
+  font-size: 12px;
+  margin-top: 0px;
+  padding: 0px;
+  margin-top: 0px;
+}
+.star {
+  width: 12px;
+  height: 12px;
+}
+span {
+  font-weight: 700;
+}
+.card-details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  p {
+    margin-top: 0px;
+    margin-bottom: 2px;
+    font-size: 10px;
+    padding: 0px;
+  }
+}
+.card-img {
+  width: 176px;
+  height: 235px;
+  margin-bottom: 10px;
+  img {
+    max-width: 100%;
+    height: 100%;
+  }
+}
+.flex-cards {
+  display: flex;
+  flex-wrap: nowrap !important;
+  justify-content: space-between;
+  column-gap: 20px;
+  padding-left: 30px;
+  padding-right: 0px;
+  overflow-x: hidden;
 }
