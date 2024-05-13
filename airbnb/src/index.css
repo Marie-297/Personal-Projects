@@ -3,8 +3,37 @@
 }
 body {
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: poppins,sans-serif;
 }
 nav {
-  padding: 20px 50px;
+  padding: 10px 50px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.airbnb {
+  width: 550px;
+  height: 860px;
+}
+.uppersection {
+  padding: 15px 30px;
+  display: flex;
+  flex-direction: column;
+  .img-grid {
+    width: 70%;
+    max-height: 400px;
+    align-self: center;
+  }
+  .header {
+    width: 400px;
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-top: 0px;
+  }
+  .text {
+    width: 380px;
+    font-size: 18px;
+    margin-top: 0px;
+  }
 }
