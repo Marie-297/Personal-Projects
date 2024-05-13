@@ -1,0 +1,13 @@
+.App {
+  /* Your common styles here */
+}
+
+.dark-mode {
+  background-color: #000;
+  color: #fff;
+}
+
+.light-mode {
+  background-color: #eee;
+  color: #000;
+}
