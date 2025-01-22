@@ -1,0 +1,70 @@
+/* styling the body of my page */
+body {
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-image: linear-gradient(to right, rgb(245, 223, 97), rgb(0, 128, 90), rgb(243, 107, 107));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calculator {
+  background-color: lightgray;
+  
+}
+
+button {
+  outline: none;
+  border: 5px solid rgba(96, 245, 245, 0.881);
+  cursor: pointer;
+  height: 70px;
+  width: 100px;
+  background-color: aqua;
+  font-weight: 700;
+  box-shadow: 20px;
+}
+@keyframes inOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* Adding hover to my button when you hover over it*/
+button:hover {
+  background-color: lightgray;
+}
+button:focus {
+  background-color: aqua;
+}
+button:active {
+  animation: inOut 1s ease-out;
+}
+
+.rw {
+  display: flex;
+  flex-direction: row;
+}
+.span-two {
+  width: 200px;
+}
+
+input {
+  width: 400px;
+  height: 80px;
+  background-color: rgb(52, 49, 49);
+  color: white;
+  font-size: 24px;
+  font-weight: 900;
+  text-align: right;
+  padding-right: 10px;
+}
+
