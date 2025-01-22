@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import Button from './Button'
+import Gmail from '../assets/Images/gmail.svg';
+import Linkedin from '../assets/Images/linkedin.svg';	
 
 class Info extends Component {
   render() {
@@ -18,8 +20,8 @@ class Info extends Component {
           {this.props.profileWebsite}
         </p>
         <div className="buttons">
-          <Button imgName='../../src/assets/Images/gmail.svg' buttonName='Email' bgColor='white' />
-          <Button imgName='../../src/assets/Images/linkedin.svg' buttonName='LinkedIn' bgColor='rgb(48, 48, 230)' textColor='white'/>
+          <Button imgName={Gmail} buttonName='Email' bgColor='white' />
+          <Button imgName={Linkedin} buttonName='LinkedIn' bgColor='rgb(48, 48, 230)' textColor='white'/>
         </div>
       </div>
     )

@@ -1,4 +1,8 @@
 import React, { Component } from 'react'
+import Twitter from '../assets/Images/twitter.svg';
+import Facebook from '../assets/Images/facebook.svg';
+import Insta from '../assets/Images/instagram.svg';
+import Github from '../assets/Images/github.svg';
 
 class Footer extends Component {
   render() {
@@ -6,19 +10,19 @@ class Footer extends Component {
       <div>
        <div className="socials">
         <a href="">
-            <img src="../../src/assets/Images/twitter.svg" alt="twitter" />
+            <img src={Twitter} alt="twitter" />
           </a>
 
           <a href="">
-            <img src="../../src/assets/Images/facebook.svg" alt="facebook" />
+            <img src={Facebook} alt="facebook" />
           </a>
 
           <a href="">
-            <img src="../../src/assets/Images/instagram.svg" alt="instagram" />
+            <img src={Insta} alt="instagram" />
           </a>
 
           <a href="">
-            <img src="../../src/assets/Images/github.svg" alt="github" />
+            <img src={Github} alt="github" />
           </a>
        </div>
       </div>

@@ -4,7 +4,7 @@ import About from './Components/About'
 import Interest from './Components/Interest'
 import Footer from './Components/Footer'
 import Switchbutton from './Components/Switchbutton'
-// import './App.css'; // Import your CSS file
+import Pic from './assets/Images/img.jpg'
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -17,7 +17,7 @@ function App() {
     <div className={`App ${isDarkMode ? 'dark-mode' : 'light-mode'}`}>
       <Switchbutton toggleDarkMode={toggleDarkMode} />
       <div className='Card'>
-        <Info imgPic='./../src/assets/Images/img.jpg' profileName='Mariama Seidu' profileStatus='Frontend Developer' profileWebsite='merrylyt@gmail.com'/>
+        <Info imgPic={Pic} profileName='Mariama Seidu' profileStatus='Frontend Developer' profileWebsite='merrylyt@gmail.com'/>
         <About />
         <Interest />
         <Footer />
