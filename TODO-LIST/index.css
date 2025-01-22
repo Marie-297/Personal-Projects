@@ -1,0 +1,45 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.todo_input {
+  padding: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid black;
+  margin-right: 20px;
+}
+
+.due-date {
+  padding: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid black;
+  margin-right: 20px;
+}
+.add-btn {
+  background-color: green;
+  padding: 5px 37px;
+  color: white;
+  font-size: 14px;
+}
+.del-btn {
+  background-color: darkred;
+  color: white;
+  padding: 5px 15px;
+  font-size: 14px;
+}
+.list {
+  display: grid;
+  margin-top: 20px;
+  grid-template-columns: 200px 142px 100px;
+  column-gap: 10px;
+  row-gap: 20px;
+  font-size: 18px;
+  color: darkblue;
+  font-weight: 400;
+}
